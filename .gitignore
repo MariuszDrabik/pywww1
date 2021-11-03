@@ -1,0 +1,5 @@
+.pywwwvenv
+pywwwvenv/
+.env
+.idea
+
