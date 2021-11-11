@@ -2,4 +2,6 @@
 pywwwvenv/
 .env
 .idea
-
+commands.txt
+.vscode/
+.vscode/

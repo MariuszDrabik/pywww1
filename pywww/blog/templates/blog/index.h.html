@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+    <title>Our Posts</title>
+</head>
+<body>
+<a href="{% url 'blog:blog_index' %}">
+    <img id="small_logo" src="{% static 'blog/images/small_logo.png' %}" alt="logo-pizzaMama">
+</a>
+<div class="title">
+<h1>Our Blog</h1>
+</div>
+<div class="menu_list">
+    {% for post in posts %}
+        <div class="menu_list_item">
+            <span class="menu_list_title">{{post.title}}  </span>
+             <span class="menu_list_title">{{post.content}}  </span>
+             <span class="menu_list_title">{{post.created}}  </span>
+        </div>
+    {% endfor %}
+</div>
+</body>
+</html>
