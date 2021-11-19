@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
+    'main.apps.MainConfig',
     'blog.apps.BlogConfig',
     'books.apps.BooksConfig'
 ]
@@ -116,6 +118,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+SHELL_PLUS_PRINT_SQL = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

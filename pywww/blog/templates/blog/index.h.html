@@ -14,12 +14,16 @@
 <div class="title">
 <h1>Our Blog</h1>
 </div>
-<div class="menu_list">
-    {% for post in posts %}
-        <div class="menu_list_item">
-            <span class="menu_list_title">{{post.title}}  </span>
-             <span class="menu_list_title">{{post.content}}  </span>
-             <span class="menu_list_title">{{post.created}}  </span>
+<div class="blog_list">
+    {% for post in posts_list %}
+        <div class="blog_list_item">
+            <span class="blog_list_title">{{post.title}}  </span>
+        {% if post.sponsored %}
+         <span class="blog_list_title">post sponsorowany</span><br>
+        {% endif %}
+             <span class="blog_list_meta">{{post.created}}  </span>
+             <span class="blog_content_short">{{post.content|truncatewords:30|linebreaks}}  </span>
+             <a href="{{ post.get_absolute_url}}" class="btn btn-primary">Read More &rarr;</a>
         </div>
     {% endfor %}
 </div>

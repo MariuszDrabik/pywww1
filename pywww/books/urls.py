@@ -16,10 +16,11 @@ Including another URLconf
 
 from django.urls import path
 from main.views import hello_word
-from .views import books_index
+from .views import book_detail, books_index
 
 app_name = "books"
 
 urlpatterns = [
-    path('', books_index, name='books_index')
+    path('', books_index, name='books_index'),
+    path('1', book_detail, name='book_detail'),
 ]

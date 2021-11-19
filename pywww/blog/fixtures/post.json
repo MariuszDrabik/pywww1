@@ -1,0 +1,44 @@
+[
+{
+    "model": "blog.post",
+    "pk": 1,
+    "fields": {
+        "title": "Pierwszy post",
+        "slug": "pierwszy_post",
+        "content": "Za dnia jestem kurierem w nocy hakerem",
+        "published": true,
+        "sponsored": true,
+        "created": "2021-11-11T18:07:09.612Z",
+        "modified": "2021-11-19T17:37:21.611Z",
+        "author": 1
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+        "title": "Appka dzia?a i jest wspaniala",
+        "slug": "appka-dziala-i-jest-wspaniala",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis luctus neque, ut mollis tortor suscipit et. Donec turpis est, porttitor ac ipsum eget, luctus iaculis quam. Aenean vitae rhoncus lacus, quis sollicitudin metus. Vivamus tempor neque quam, eget scelerisque tellus pulvinar ut. Vestibulum scelerisque dolor velit, eu pellentesque justo vulputate ut. Donec ac iaculis elit. Mauris aliquet feugiat nulla, vitae blandit magna ultrices quis. Aliquam sed blandit ante, non suscipit urna. Integer quis felis id velit suscipit scelerisque. In vitae feugiat ante. Vivamus varius neque justo. Nulla in metus elit.\r\n\r\nProin luctus ipsum lacus. Nulla massa diam, consequat non lacus eget, consequat suscipit augue. Mauris eget libero aliquet mi porta molestie. Proin vitae ligula lectus. Ut ut odio tincidunt, lobortis lorem et, fringilla ante. Nam nisi quam, pellentesque vitae cursus vitae, egestas sit amet nulla. Proin ac lectus vitae nisi interdum ultricies ac id diam. Donec hendrerit in lorem a condimentum. Fusce eget nulla ipsum.\r\n\r\nFusce pellentesque velit sapien, ac mattis velit sagittis vel. Donec nec lobortis orci. Ut eros diam, sagittis lacinia pellentesque sit amet, elementum sit amet mi. Cras metus ex, imperdiet nec dui in, tempor suscipit nulla. Morbi eget bibendum dui. Ut efficitur odio diam, nec fringilla quam porttitor vitae. Fusce blandit at ipsum ut maximus. Integer sollicitudin, mauris quis hendrerit mollis, lectus mauris mollis massa, vel bibendum leo felis pharetra diam. Nulla facilisi. Aliquam vulputate purus eu sapien tincidunt dignissim.\r\n\r\nFusce interdum felis ac dui ultricies, ut tristique mauris congue. Aliquam ac turpis massa. In consequat purus vel tempus finibus. Pellentesque blandit urna vitae malesuada tempus. Vestibulum aliquet eleifend risus, eu mattis nulla mattis id. Integer nisl felis, rutrum sed arcu eget, volutpat aliquam lacus. Quisque ante quam, tempor sed pharetra a, mattis at nisi. Proin mattis sem vitae nibh vehicula, eu hendrerit felis pharetra. Quisque vitae molestie augue. Pellentesque non vehicula elit, vitae condimentum tortor. Fusce hendrerit augue eget massa condimentum pulvinar.",
+        "published": true,
+        "sponsored": false,
+        "created": "2021-11-17T19:40:44.205Z",
+        "modified": "2021-11-17T19:40:44.205Z",
+        "author": 1
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+        "title": "Bardzo fiajna ta apka",
+        "slug": "bardzo-fiajna-ta-apka",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis luctus neque, ut mollis tortor suscipit et. Donec turpis est, porttitor ac ipsum eget, luctus iaculis quam. Aenean vitae rhoncus lacus, quis sollicitudin metus. Vivamus tempor neque quam, eget scelerisque tellus pulvinar ut. Vestibulum scelerisque dolor velit, eu pellentesque justo vulputate ut. Donec ac iaculis elit. Mauris aliquet feugiat nulla, vitae blandit magna ultrices quis. Aliquam sed blandit ante, non suscipit urna. Integer quis felis id velit suscipit scelerisque. In vitae feugiat ante. Vivamus varius neque justo. Nulla in metus elit.\r\n\r\nProin luctus ipsum lacus. Nulla massa diam, consequat non lacus eget, consequat suscipit augue. Mauris eget libero aliquet mi porta molestie. Proin vitae ligula lectus. Ut ut odio tincidunt, lobortis lorem et, fringilla ante. Nam nisi quam, pellentesque vitae cursus vitae, egestas sit amet nulla. Proin ac lectus vitae nisi interdum ultricies ac id diam. Donec hendrerit in lorem a condimentum. Fusce eget nulla ipsum.\r\n\r\nFusce pellentesque velit sapien, ac mattis velit sagittis vel. Donec nec lobortis orci. Ut eros diam, sagittis lacinia pellentesque sit amet, elementum sit amet mi. Cras metus ex, imperdiet nec dui in, tempor suscipit nulla. Morbi eget bibendum dui. Ut efficitur odio diam, nec fringilla quam porttitor vitae. Fusce blandit at ipsum ut maximus. Integer sollicitudin, mauris quis hendrerit mollis, lectus mauris mollis massa, vel bibendum leo felis pharetra diam. Nulla facilisi. Aliquam vulputate purus eu sapien tincidunt dignissim.\r\n\r\nFusce interdum felis ac dui ultricies, ut tristique mauris congue. Aliquam ac turpis massa. In consequat purus vel tempus finibus. Pellentesque blandit urna vitae malesuada tempus. Vestibulum aliquet eleifend risus, eu mattis nulla mattis id. Integer nisl felis, rutrum sed arcu eget, volutpat aliquam lacus. Quisque ante quam, tempor sed pharetra a, mattis at nisi. Proin mattis sem vitae nibh vehicula, eu hendrerit felis pharetra. Quisque vitae molestie augue. Pellentesque non vehicula elit, vitae condimentum tortor. Fusce hendrerit augue eget massa condimentum pulvinar.",
+        "published": false,
+        "sponsored": false,
+        "created": "2021-11-17T19:41:03.891Z",
+        "modified": "2021-11-17T19:41:03.891Z",
+        "author": 1
+    }
+}
+]

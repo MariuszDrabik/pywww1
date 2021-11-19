@@ -1,14 +1,20 @@
+from django.http import request
 from django.http.response import HttpResponse
-from django.shortcuts import render
+from django.views import generic
+from django.shortcuts import get_object_or_404, render
 
 from .models import Post
 
 
 def blog_index(request):
     posts = Post.objects.all()
-    
-    return render(request, 'blog/index.h.html', {'posts': posts})
+    print(posts)
+    for i in posts:
+        print(i.sponsored)
+    return render(request, 'blog/index.h.html', {'posts_list': posts})
 
-# def blog_index(request):
-#     posts = Post.objects.all()    
-#     return HttpResponse('Tu bedom posty')
+
+def post_detail(request, post):
+    post = get_object_or_404(Post, slug=post)
+
+    return render(request, "blog/post_detail.html", {"post": post})

@@ -16,10 +16,11 @@ Including another URLconf
 
 from django.urls import path
 from main.views import hello_word
-from .views import blog_index
+from .views import blog_index, post_detail
 
 app_name = "blog"
 
 urlpatterns = [
-    path('', blog_index, name='blog_index')
+    path('', blog_index, name='blog_index'),
+    path('<slug:post>/', post_detail, name='post_detail'),
 ]

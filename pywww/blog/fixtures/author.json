@@ -1,0 +1,10 @@
+[
+{
+    "model": "blog.author",
+    "pk": 1,
+    "fields": {
+        "first_name": "Mariusz",
+        "last_name": "Drabik"
+    }
+}
+]

@@ -1,5 +1,4 @@
 from django.db import models
-from django.db.models.fields import CharField
 
 
 class Author(models.Model):
@@ -14,10 +13,10 @@ class Book(models.Model):
     title = models.CharField(max_length=550)
     description = models.TextField()
     available = models.BooleanField(default=True)
-    publshed = models.BooleanField(default=False)
+    published = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return f'Tytuł: {self.title}'
+        return f'{self.pk} Tytuł: {self.title} {self.author}'

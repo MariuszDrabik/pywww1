@@ -19,7 +19,7 @@ from main.views import hello_word
 
 urlpatterns = [
     path('zaplecze/', admin.site.urls),
-    path('', include('main.urls')),
     path('blog/', include('blog.urls')),
     path('books/', include('books.urls')),
+    path('', include('main.urls')),
 ]
