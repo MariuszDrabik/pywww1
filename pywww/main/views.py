@@ -3,7 +3,19 @@ from django.http import HttpResponse
 
 
 def hello_word(request):
-    return HttpResponse("Hello Word")
+    greeta = 'hello main page'
+    context = {
+            'text': greeta
+    }
+    return render(request, 'main/base.html', context=context)
+
+
+def about(request):
+    h1 = 'hello about page'
+    context = {
+            'about': h1
+    }
+    return render(request, 'main/about.html', context=context)
 
 
 def test(request):

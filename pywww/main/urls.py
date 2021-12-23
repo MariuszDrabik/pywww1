@@ -15,10 +15,12 @@ Including another URLconf
 """
 
 from django.urls import path
-from main.views import hello_word, test
+from main.views import hello_word, test, about
 
+app_name = "main"
 
 urlpatterns = [
-    path('', hello_word),
+    path('', hello_word, name='index'),
+    path('about', about, name='about'),
     path('test', test),
 ]

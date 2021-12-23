@@ -1,23 +1,17 @@
-{% load static %}
+{% extends 'main/base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
-    <title>Our Posts</title>
-</head>
-<body>
-<a href="{% url 'blog:blog_index' %}">
-    <img id="small_logo" src="{% static 'blog/images/small_logo.png' %}" alt="logo-pizzaMama">
-</a>
-<div class="title">
+
+{% block title %} Posty tu mamy {% endblock %}
+
+{% block content %}
+
 <h1>Our Blog</h1>
-</div>
+
 <div class="blog_list">
+
     {% for post in posts_list %}
         <div class="blog_list_item">
-            <span class="blog_list_title">{{post.title}}  </span>
+            <a href="/blog/{{post.slug}}" class="btn btn-primary"><span class="blog_list_title">{{post.title}}  </span></a>
         {% if post.sponsored %}
          <span class="blog_list_title">post sponsorowany</span><br>
         {% endif %}
@@ -27,5 +21,4 @@
         </div>
     {% endfor %}
 </div>
-</body>
-</html>
+{% endblock %}

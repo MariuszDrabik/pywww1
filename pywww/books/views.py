@@ -10,7 +10,7 @@ def books_index(request):
     return render(request, 'books/books_list.html', {'books_list': books})
 
 
-def book_detail(book):
-    unique_slug = get_object_or_404(Book)
+def book_detail(request, year, book):
+    unique_slug = get_object_or_404(Book, slug=book, created__year=year)
     print(unique_slug)
-    return render(request, "books/books_detail.html", {"book": unique_slug})
+    return render(request, "books/book_detail.html", {"book": unique_slug})

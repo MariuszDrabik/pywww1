@@ -22,5 +22,5 @@ app_name = "books"
 
 urlpatterns = [
     path('', books_index, name='books_index'),
-    path('1', book_detail, name='book_detail'),
+    path('<int:year>/<slug:book>/', book_detail, name='book_detail'),
 ]
