@@ -1,0 +1,24 @@
+
+{% extends 'main/base.html' %}
+
+{% block tilte %}
+  Lista
+{% endblock %}
+
+{% block content %}
+<h1>Lista książek</h1>
+    {% for book in books_list %}
+        <div class="blog_list_item">
+            <h2 class="blog_list_title">{{book.title}} |   
+            {% if book.available %}
+               <span class="ava">Dostępna</span>
+           {% else %}
+               <span class="ava">Wyporzyczona</span></h2>
+           {% endif %}
+           <br/>
+             {% comment %} <span class="blog_list_meta">{{post.content}}  </span> {% endcomment %}
+             <span class="blog_list_meta">{{book.created}}  </span>
+             <a href="{{ book.get_absolute_url}}" class="btn btn-primary">Read More &rarr;</a>
+        </div>
+    {% endfor %}
+{% endblock %}
