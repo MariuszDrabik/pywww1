@@ -1,12 +1,9 @@
 from django.db import models
 
-# from django.contrib.auth.models import User
 
+class UserProfile(models.Model):
+    user = models.OneToOneField("auth.User", on_delete=models.CASCADE)
+    bio = models.TextField()
 
-# class Post(models.Model):
-#     title = models.CharField(max_length=255)
-#     content = models.TextField()
-#     publshed = models.BooleanField(default=False)
-#     created = models.DateTimeField(auto_now_add=True)
-#     modified = models.DateTimeField(auto_now=True)
-    
+    def __str__(self) -> str:
+        return f'OKOKOKO {self.user} {self.pk}'
