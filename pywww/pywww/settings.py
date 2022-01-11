@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django_extensions',
     'main.apps.MainConfig',
     'blog.apps.BlogConfig',
-    'books.apps.BooksConfig'
+    'books.apps.BooksConfig',
+    'tags.apps.TagsConfig'
 ]
 
 MIDDLEWARE = [
