@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.utils.text import slugify
 
 
 class Author(models.Model):
@@ -19,6 +20,8 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)
+    tags = models.ManyToManyField('tags.Tag', related_name='blog')
+    categories = models.ManyToManyField('blog.Category', related_name='blog', null=True)
 
     class Meta:
         ordering = ['-published']
@@ -28,3 +31,16 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse("blog:post_detail", args=[self.slug])
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    slug = models.SlugField(max_length=255, unique=True)
+
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        return super().save(*args, **kwargs)
