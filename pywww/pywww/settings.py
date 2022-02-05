@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'main.apps.MainConfig',
     'blog.apps.BlogConfig',
     'books.apps.BooksConfig',
-    'tags.apps.TagsConfig'
+    'tags.apps.TagsConfig',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -121,6 +122,8 @@ USE_L10N = True
 USE_TZ = True
 
 SHELL_PLUS_PRINT_SQL = True
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

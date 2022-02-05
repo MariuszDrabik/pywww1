@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.utils.text import slugify
 
 
+
 class Author(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
@@ -21,7 +22,7 @@ class Post(models.Model):
     modified = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)
     tags = models.ManyToManyField('tags.Tag', related_name='blog')
-    categories = models.ManyToManyField('blog.Category', related_name='blog', null=True)
+    categories = models.ManyToManyField('blog.Category', related_name='blog')
 
     class Meta:
         ordering = ['-published']
@@ -44,3 +45,4 @@ class Category(models.Model):
         if not self.slug:
             self.slug = slugify(self.name)
         return super().save(*args, **kwargs)
+

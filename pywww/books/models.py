@@ -20,6 +20,7 @@ class Book(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)
+    tags = models.ManyToManyField("tags.Tag", related_name="books")
 
     class Meta:
         ordering = ['-created']

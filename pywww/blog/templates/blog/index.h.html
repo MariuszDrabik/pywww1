@@ -10,15 +10,15 @@
 <div class="blog_list">
 
     {% for post in posts_list %}
-        <div class="blog_list_item">
-            <a href="/blog/{{post.slug}}" class="btn btn-primary"><span class="blog_list_title">{{post.title}}  </span></a>
+    <div class="bg-light p-5 rounded">
+        <a href="/blog/{{post.slug}}" class=""><h2 class="blog_list_title">{{post.title}}  </h2></a>
         {% if post.sponsored %}
          <span class="blog_list_title">post sponsorowany</span><br>
         {% endif %}
-             <span class="blog_list_meta">{{post.created}}  </span>
-             <span class="blog_content_short">{{post.content|truncatewords:30|linebreaks}}  </span>
-             <a href="{{ post.get_absolute_url}}" class="btn btn-primary">Read More &rarr;</a>
-        </div>
+        <span class="blog_list_meta">{{post.created}}  </span>
+        <span class="blog_content_short">{{post.content|truncatewords:30|linebreaks}}  </span>
+        <a href="{{ post.get_absolute_url}}" class="btn btn-primary">Read More &rarr;</a>
+    </div>        
     {% endfor %}
 </div>
 {% endblock %}
