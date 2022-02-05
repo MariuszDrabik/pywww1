@@ -16,5 +16,6 @@ def blog_index(request):
 
 def post_detail(request, post):
     posta = get_object_or_404(Post, slug=post)
+    tags = posta.tags.all()
 
-    return render(request, "blog/post_detail.html", {"post": posta})
+    return render(request, "blog/post_detail.html", {"post": posta, "tags": tags})

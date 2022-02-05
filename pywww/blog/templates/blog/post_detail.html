@@ -9,6 +9,13 @@
       <div class="card-body">
         <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
         <p class=" text-muted">{{ post.author }} | {{ post.created }}</p>
+        {% if tags %}
+          <p class=" text-muted">Tagi:
+            {% for tag in tags %}
+              {{ tag.name }}
+            {% endfor %}
+        {% endif %}
+          </p>
         <p class="card-text ">{{ post.content | safe }}</p>
       </div>
     </div>

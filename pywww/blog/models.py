@@ -21,8 +21,8 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)
-    tags = models.ManyToManyField('tags.Tag', related_name='blog')
-    categories = models.ManyToManyField('blog.Category', related_name='blog')
+    tags = models.ManyToManyField('tags.Tag', related_name='posts')
+    categories = models.ManyToManyField('blog.Category', related_name='posts')
 
     class Meta:
         ordering = ['-published']
