@@ -21,6 +21,6 @@ app_name = "main"
 
 urlpatterns = [
     path('', hello_word, name='index'),
-    path('about', about, name='about'),
+    path('about/', about, name='about'),
     path('test', test),
 ]

@@ -1,3 +1,5 @@
+from re import template
+from django.template import loader
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -15,7 +17,9 @@ def about(request):
     context = {
             'about': h1
     }
-    return render(request, 'main/about.html', context=context)
+    template = loader.get_template("main/about.html")
+    # return render(request, 'main/about.html', context=context)
+    return HttpResponse(template.render())
 
 
 def test(request):
